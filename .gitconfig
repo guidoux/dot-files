@@ -1,0 +1,43 @@
+[user]
+	email = <email>
+	name = <name>
+
+[github]
+	user = <github_user>
+
+[core]
+	excludesfile = ˜/.gitignore_global
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[color]
+	ui = auto
+	interactive = true
+	status = true
+	branch = true
+	diff = true
+
+[push]
+	default = current
+
+[alias]
+	undo = reset --soft HEADˆ
+	s = status
+	v = show
+	l = log --pretty=oneline
+	ll = log
+	a = add
+	c = commit
+	co = checkout
+	b = branch
+	ls = branch
+	d = diff
+	dc = diff --cached
+	cp = cherry-pick
+	sh = !git-sh
+	prom = pull --rebase origin master
