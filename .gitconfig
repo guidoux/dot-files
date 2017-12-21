@@ -43,3 +43,4 @@
 	prom = pull --rebase origin master
 	acom = "!f() { story=$(git rev-parse --abbrev-ref HEAD | cut -d '/' -f1); echo \"$story: $1. co-author: @$2\" | git commit -F -; }; f"
 	count = shortlog -s -n
+	punch = push --force-with-lease
